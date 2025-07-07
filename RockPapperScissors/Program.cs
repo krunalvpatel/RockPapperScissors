@@ -52,6 +52,8 @@ namespace RockPapperScissors
             player1.Choice = GetPlayerChoice(player1.Name);
             player2.Choice = GetPlayerChoice(player2.Name);
 
+
+            //figured out a way to reduce the code duplication
             if (player1.Choice == player2.Choice)
             {
                 Console.WriteLine("It's a tie!");
@@ -72,6 +74,7 @@ namespace RockPapperScissors
 
         private static string GetPlayerChoice(string playerName)
         {
+            // Allow players to choose rock, paper, scissors or type 'random' for a random choice
             string choice;
             do
             {
@@ -98,6 +101,7 @@ namespace RockPapperScissors
         public int Score { get; set; } = 0;
     }
 
+    // Game class to manage players and rounds
     class Game
     {
         public List<Player> Players { get; set; } = new List<Player>();
